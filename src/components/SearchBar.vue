@@ -1,7 +1,7 @@
 <template>
   <div class="contain-input">
     <input type="text" v-model="data" placeholder="Search...." class="query">
-    <a class="button" @click="renderFilterNews">Search</a>
+    <hr>
     <div>
       <RenderCards :query="query"/>
     </div>
@@ -24,8 +24,8 @@ export default {
       query: ""
     };
   },
-  methods: {
-    renderFilterNews() {
+  watch: {
+    data() {
       axios
         .get(
           `https://newsapi.org/v2/everything?q=${
