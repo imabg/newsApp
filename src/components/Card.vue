@@ -2,18 +2,17 @@
   <div class="container">
     <div class="columns is-multiline">
       <div class="column is-one-quarter" v-for="(article, index) in query" :key="index">
-        <a :href="article.url" target="_blank">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-3by2">
-                <img :src="article.urlToImage" :alt="article.title">
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="content">{{ article.title }}</div>
-            </div>
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-3by2">
+              <img :src="article.urlToImage" :alt="article.title">
+            </figure>
           </div>
-        </a>
+          <div class="card-content">
+            <div class="content">{{ article.title }}</div>
+            <a :href="article.url" class="link" target="_blank">Full news</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -42,7 +41,18 @@ export default {
 }
 .card:hover,
 .card:active {
-  cursor: pointer;
   background: #e3e3e3;
+}
+.link {
+  color: brown;
+}
+.link:hover,
+.link:active {
+  text-decoration: underline;
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+  border-radius: 200px;
+  padding: 12px;
 }
 </style>
