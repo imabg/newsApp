@@ -26,7 +26,8 @@ export default {
   },
   watch: {
     data() {
-      axios
+      if (this.data != ""){
+        axios
         .get(
           `https://newsapi.org/v2/everything?q=${
             this.data
@@ -36,6 +37,7 @@ export default {
           this.query = res.data.articles;
         })
         .catch(err => alert("ERROR!!!"));
+      } 
     }
   }
 };

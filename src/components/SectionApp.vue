@@ -11,6 +11,7 @@
             class="abhay"
           >Abhay Goswami</a>
         </h2>
+        <p>Proudly powered by <strong><a href="https://newsapi.org/" target="_blank">NewsAPI.org</a></strong></p>
       </div>
     </div>
   </section>

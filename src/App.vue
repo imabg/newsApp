@@ -34,7 +34,7 @@ export default {
     axios
       .get(
         `
-https://newsapi.org/v2/top-headlines?country=us&apiKey=bb099b09ac6a417c8e0bad543fbf0311`
+https://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=bb099b09ac6a417c8e0bad543fbf0311`
       )
       .then(res => {
         this.query = res.data.articles;
